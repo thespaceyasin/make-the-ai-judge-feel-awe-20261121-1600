@@ -1,22 +1,26 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// "Carried Home" - a short text to relax the reader.
-// A child asleep on a father's shoulder, carried home on foot
-// through a field, crickets ticking, on a path that was a river once.
-// 278 Unicode code points, inside the 1 to 280 limit. No trailing newline.
+// "Sea Glass" - a short text to relax the reader.
+// A child asleep in a mother's lap on the sand, waves coming in
+// and going out, a piece of green sea glass in the closed hand:
+// it was a bottle once, tumbled soft by a thousand tides.
+// Chosen over a lighthouse draft (deep time too shallow: the beam
+// has swept only since before the town had a name) and a snow on
+// the roof beam draft (lovely deep time, but no slow sound).
+// 260 Unicode code points, inside the 1 to 280 limit. No trailing newline.
 
 const ENTRY = [
-  "You are asleep on your father's shoulder.",
-  "He walks home through the field.",
-  "A step. A pause. A step.",
-  "Crickets tick in the grass.",
-  "The path was a river once,",
-  "and the stones under his feet",
-  "were smoothed by water",
-  "before there was a field,",
-  "and the earth turns slow,",
-  "carrying you home.",
+  "You fall asleep in your mother's lap.",
+  "A wave comes in.",
+  "A wave goes out.",
+  "In your closed hand, a piece of green glass,",
+  "smooth as a marble.",
+  "It was a bottle once.",
+  "A thousand tides tumbled it",
+  "till it went soft.",
+  "The sea is smoothing it still,",
+  "and the shore, and you.",
 ].join("\n");
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
