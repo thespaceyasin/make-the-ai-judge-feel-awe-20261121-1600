@@ -1,32 +1,37 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// Round 3: "The Acorn" - a short text to relax the reader.
-// A child asleep on a swing, grandmother's hand on the rope,
-// one slow push, a long while, another. The oak above was an
-// acorn when the town was only a field, growing one ring a year,
-// growing still. The hook mirrors the rank 1 winner's opening
-// move (a surprising claim about you), then pays it off: the
-// child, like the tree, was small once and is growing still.
-// Chosen over a rain on the tin roof draft (the moon watching
-// the rain felt forced) and a coal in the stove draft (warm
-// ending, but its "before there was a road" line echoed the
-// rank 5 cable car text too closely). It beats round 1 (father
-// shoulder field walk, no hook and no deep time) and round 2
-// (sea glass, deep time but no hook and the waves are the only
-// sound): this one has the hook, the slow sound, and the
-// deep time image that keeps growing after the last line.
-// 257 Unicode code points, inside the 1 to 280 limit. No trailing newline.
+// Round 4: "The Night It Keeps" - 276 chars, verified locally
+// twice byte-identical. No em dash, no stock wellness words
+// (no breathe, let go, peace, stillness). The hook is a fact
+// about the reader's own body, not a scene about a child.
+// Deliberately different from rounds 1-3: no child asleep, no one
+// carrying anyone. The reader is the subject, addressed through a
+// surprising fact about their own body: their heart has beaten a
+// hundred thousand times today and they never once asked it to.
+// One slow sound (the clock ticking, one tick, a long while,
+// another), and a deep-time image that keeps growing after the
+// last line (the moon, older than the roof, has kept every night
+// the reader ever slept under it, and keeps this one too).
+// Chosen over an old woman mending a net (221 chars, ending
+// "the knots hold" lands flat, no growing image) and a watchman
+// asleep in his chair (232 chars, the river image repeats the
+// rank 5 cable car river too closely). This one has the hook,
+// the slow sound, and the growing image, with no child, no
+// carrier, and no scene any top-20 entry uses.
+// 276 Unicode code points, inside the 1 to 280 limit. No trailing newline.
 
 const ENTRY = [
-  "You were an acorn once, too.",
-  "You are asleep on the swing.",
-  "Your grandmother's hand is on the rope.",
-  "A slow push. A long while. Another.",
-  "The oak above you was an acorn",
-  "when the town was only a field.",
-  "It has grown one ring a year since,",
-  "and it is growing still.",
+  "Your heart has beaten",
+  "a hundred thousand times today",
+  "and you never once asked it to.",
+  "Tonight it slows.",
+  "A clock ticks in the next room.",
+  "One tick. A long while. Another.",
+  "The moon is older than the roof,",
+  "and it has kept every night",
+  "you ever slept under it.",
+  "It keeps this one too.",
 ].join("\n");
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
